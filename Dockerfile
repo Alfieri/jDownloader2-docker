@@ -1,8 +1,8 @@
+FROM openjdk:8-jre
+
 LABEL maintainer="maak.daniel@gmail.com"
 LABEL version="0.0.1"
 LABEL description="Docker image for JDownloader2"
-
-FROM openjdk:8-jre
 
 RUN mkdir -p /opt/jdownloader2/
 WORKDIR /opt/jdownloader2/
