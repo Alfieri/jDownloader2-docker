@@ -5,7 +5,8 @@ LABEL version="1.0.0"
 LABEL description="Dockerimage for JDownloader2 in Headless mode"
 
 # install unrar for rar archives
-RUN apt-get update && apt-get install -y unrar \
+RUN apt-add-repository non-free \ 
+        && apt-get update && apt-get install -y unrar \
         && rm -rf /var/lib/apt/lists/*
 
 # create root download directory
