@@ -1,0 +1,10 @@
+version: "3.4"
+
+services:
+  jd2:
+    image: alfieri/jdownloader2:latest
+    container_name: jd2
+    restart: always
+    volumes:
+      - "<your config path here>:/opt/jdownloader2/cfg"
+      - "<your download path here>:/root/Downloads"
