@@ -12,7 +12,7 @@ LABEL maintainer="maak.daniel@gmail.com" \
 RUN sed -i "s#deb http://deb.debian.org/debian stretch main#deb http://deb.debian.org/debian stretch main non-free#g" /etc/apt/sources.list \
         && sed -i "s#deb http://deb.debian.org/debian stretch-updates main#deb http://deb.debian.org/debian stretch-updates main non-free#g" /etc/apt/sources.list \
         && apt-get update \ 
-        && apt-get install -qy unrar \
+        && apt-get install -qy unrar sudo \
         && rm -rf /var/lib/apt/lists/*
 
 ###-----
@@ -20,7 +20,8 @@ RUN sed -i "s#deb http://deb.debian.org/debian stretch main#deb http://deb.debia
 ###-----
 ARG DEFAULT_UID="1000"
 ARG DEFAULT_GID="100"
-RUN useradd -u ${DEFAULT_UID} -g ${DEFAULT_GID} -s /bin/false jdownloader \
+RUN groupmod --new-name jdownloader users \
+        && useradd -u ${DEFAULT_UID} -g ${DEFAULT_GID} -s /bin/false jdownloader \
         && mkdir -p /home/jdownloader/Downloads \
         && chown ${DEFAULT_UID}:${DEFAULT_GID} /home/jdownloader/Downloads
 
@@ -31,13 +32,12 @@ WORKDIR /opt/jdownloader2/
 ADD http://installer.jdownloader.org/JDownloader.jar .
 RUN java -Djava.awt.headless=true -jar JDownloader.jar
 COPY root/ /
-RUN chmod +x change-user.sh run-endless.sh
+RUN chmod +x run-endless.sh
 
 ###-----
 # Run
 ###-----
 VOLUME [ "/home/jdownloaders/Downloads" ]
 VOLUME [ "/opt/jdownloader2/cfg" ]
-RUN chown -R jdownloader:100 /opt/jdownloader2
-USER jdownloader
+RUN chown -R jdownloader:jdownloader /opt/jdownloader2
 CMD ["/bin/bash","run-endless.sh"]
