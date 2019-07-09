@@ -10,17 +10,29 @@
 ![docker pulls](https://img.shields.io/docker/pulls/alfieri/jdownloader2.svg)
 ![docker Stars](https://img.shields.io/docker/stars/alfieri/jdownloader2.svg)
 
-#### Docker image for JDownloader2 running in headless mode
+Docker image for JDownloader2 running in headless mode
+
+- [Headless jDownloader2 Dockerimage](#Headless-jDownloader2-Dockerimage)
+  - [Environment Variables](#Environment-Variables)
+  - [Usage](#Usage)
+    - [Docker CLI](#Docker-CLI)
+    - [Docker Compose](#Docker-Compose)
+
 ## Environment Variables
+
 The all the files mapped in the volumes are stored with UID 1000 and GID 100. You can configure this if needed by setting the follwing two environment variables. During the container start all files from mapped volumes will be changed to the default UID/GID or passed JUID/JGID.
-|Env variable|Description|
-| :---: | :---: |
-| JUID | User ID for all files |
-| JGID | Group ID for all files |
- 
+
+| Env variable |      Description       |
+| :----------: | :--------------------: |
+|     JUID     | User ID for all files  |
+|     JGID     | Group ID for all files |
+
 ## Usage
-* Note: you do not need the --restart flag because the container will run a endless loop so it does not stop. But if you want the container start at system start up just pass --restart always
+
+Note: you do not need the `--restart` flag because the container will run a endless loop so it does not stop. But if you want the container start at system start up just pass `--restart always`
+  
 ### Docker CLI
+
 1. Pull image from [Docker Hub](https://hub.docker.com/r/alfieri/jdownloader2) `docker pull alfieri/jdownloader2:latest`.
 2. Run container with download and config directory mapping `docker run -d --name jd -v <config directory>:/opt/jdownloader2/cfg -v <downloader directory>:/home/jdownloader/Downloads alfieri/jdownloader2:latest`. 
     Just replace `config directory` and `downloader directory` with your local config and download path. During the start JDownloader will install all missing updates. If this happens the container stop automaticly (skip step 3.).
@@ -31,7 +43,7 @@ The all the files mapped in the volumes are stored with UID 1000 and GID 100. Yo
         "password" : "",
         "devicename" : ""
         ```
-    * Note: Start JDownloader in graphic Mode on your local maschine. Adjust all settings and use the config directory (or all config files) for your docker instance.
+    * Hint: Start JDownloader in graphic Mode on your local maschine. Adjust all settings and use the config directory (or all config files) for your docker instance.
 5. Start the conatiner again `docker start jd`
 
 ### Docker Compose
