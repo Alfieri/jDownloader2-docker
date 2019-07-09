@@ -31,6 +31,8 @@ The all the files mapped in the volumes are stored with UID 1000 and GID 100. Yo
 
 Note: you do not need the `--restart` flag because the container will run a endless loop so it does not stop. But if you want the container start at system start up just pass `--restart always`
   
+Hint: Start JDownloader in graphic Mode on your local maschine. Adjust all settings and use the config directory (or all config files) for your docker instance.
+
 ### Docker CLI
 
 1. Pull image from [Docker Hub](https://hub.docker.com/r/alfieri/jdownloader2) `docker pull alfieri/jdownloader2:latest`.
@@ -38,17 +40,20 @@ Note: you do not need the `--restart` flag because the container will run a endl
     Just replace `config directory` and `downloader directory` with your local config and download path. During the start JDownloader will install all missing updates. If this happens the container stop automaticly (skip step 3.).
 3. Stop container and adjust configuration `docker stop jd`
 4. Set your MyJDownloader credentials to `org.jdownloader.api.myjdownloader.MyJDownloaderSettings.json` (you will find a empty file in my git repo). Set or create the following key:value pairs
-        ```
-        "email" : "",
-        "password" : "",
-        "devicename" : ""
-        ```
-    * Hint: Start JDownloader in graphic Mode on your local maschine. Adjust all settings and use the config directory (or all config files) for your docker instance.
+
+```json
+"email" : "",
+"password" : "",
+"devicename" : ""
+```
+
 5. Start the conatiner again `docker start jd`
 
 ### Docker Compose
+
 (see docker-compose.yml in my git repo)
-```
+
+```dockerfile
 version: "3.4"
 
 services:
