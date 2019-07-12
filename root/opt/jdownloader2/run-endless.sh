@@ -1,5 +1,5 @@
 #!/bin/bash
-JAVA=/usr/local/openjdk-8/bin/java
+JAVA=/usr/local/openjdk-11/bin/java
 
 JUID=${JUID:-1000}
 JGID=${JGID:-100}
