@@ -57,9 +57,11 @@ Hint: Start JDownloader in graphic Mode on your local maschine. Adjust all setti
 4. Set your MyJDownloader credentials to `org.jdownloader.api.myjdownloader.MyJDownloaderSettings.json` (you will find a empty file in my git repo). Set or create the following key:value pairs
 
 ```json
-"email" : "",
-"password" : "",
-"devicename" : ""
+{
+  "email" : "",
+  "password" : "",
+  "devicename" : ""
+}
 ```
 
 5. Start the conatiner again `docker start jd`
