@@ -1,7 +1,6 @@
 FROM openjdk:8-jre-slim
 
-ARG VERSION="1.3"
-
+ARG VERSION="1.4"
 LABEL maintainer="maak.daniel@gmail.com" \
         version=${VERSION}} \
         description="Dockerimage for JDownloader2 in Headless mode"
@@ -30,9 +29,9 @@ RUN groupmod --new-name jdownloader users \
 ###-----
 WORKDIR /opt/jdownloader2/
 ADD http://installer.jdownloader.org/JDownloader.jar .
-RUN java -Djava.awt.headless=true -jar JDownloader.jar
 COPY root/ /
-RUN chmod +x run-endless.sh
+RUN chmod +x run-endless.sh \
+        && mkdir cfg
 
 ###-----
 # Run
