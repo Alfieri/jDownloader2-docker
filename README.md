@@ -3,8 +3,8 @@
 [![GitHub license](https://img.shields.io/github/license/Alfieri/jDownloader2-docker.svg)](https://github.com/Alfieri/jDownloader2-docker/blob/master/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/Alfieri/jDownloader2-docker.svg?label=Github%20stars)](https://github.com/Alfieri/jDownloader2-docker/stargazers)
 
-![docker build](https://img.shields.io/docker/cloud/build/alfieri/jdownloader2.svg)
 ![docker build](https://img.shields.io/docker/cloud/automated/alfieri/jdownloader2.svg)
+![docker build](https://img.shields.io/docker/cloud/build/alfieri/jdownloader2.svg)
 ![image size](https://img.shields.io/microbadger/image-size/alfieri/jdownloader2.svg)
 ![layers](https://img.shields.io/microbadger/layers/alfieri/jdownloader2.svg)
 ![docker pulls](https://img.shields.io/docker/pulls/alfieri/jdownloader2.svg)
@@ -13,10 +13,25 @@
 Docker image for JDownloader2 running in headless mode
 
 - [Headless jDownloader2 Dockerimage](#Headless-jDownloader2-Dockerimage)
+  - [Versions](#Versions)
+    - [v2.x](#v2x)
+    - [v1.x](#v1x)
   - [Environment Variables](#Environment-Variables)
   - [Usage](#Usage)
     - [Docker CLI](#Docker-CLI)
     - [Docker Compose](#Docker-Compose)
+
+## Versions
+
+If you do not care about image size then use the latest version or any version from 2.x. For my opinion the version 2.x is a little bit faster then version one because of performance improvements from openjdk 8 to 11. But since OpenJDK 10 they do not provide an image with just the Java runtime, you always get the complete SDK.
+
+### v2.x
+
+- based on OpenJDK 11 slim image
+
+### v1.x
+
+- based on OpenJDK 8 JRE slim image
 
 ## Environment Variables
 
