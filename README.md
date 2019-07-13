@@ -1,4 +1,5 @@
 # Headless jDownloader2 Dockerimage
+
 [![GitHub issues](https://img.shields.io/github/issues/Alfieri/jDownloader2-docker.svg)](https://github.com/Alfieri/jDownloader2-docker/issues)
 [![GitHub license](https://img.shields.io/github/license/Alfieri/jDownloader2-docker.svg)](https://github.com/Alfieri/jDownloader2-docker/blob/master/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/Alfieri/jDownloader2-docker.svg?label=Github%20stars)](https://github.com/Alfieri/jDownloader2-docker/stargazers)
@@ -13,6 +14,7 @@
 Docker image for JDownloader2 running in headless mode
 
 - [Headless jDownloader2 Dockerimage](#Headless-jDownloader2-Dockerimage)
+  - [Supported Tags](#Supported-Tags)
   - [Versions](#Versions)
     - [v2.x](#v2x)
     - [v1.x](#v1x)
@@ -20,6 +22,12 @@ Docker image for JDownloader2 running in headless mode
   - [Usage](#Usage)
     - [Docker CLI](#Docker-CLI)
     - [Docker Compose](#Docker-Compose)
+
+## Supported Tags
+
+- [2.0.1](https://github.com/Alfieri/jDownloader2-docker/blob/1.4/Dockerfile), [2.0](https://github.com/Alfieri/jDownloader2-docker/blob/1.4/Dockerfile), [latest](https://github.com/Alfieri/jDownloader2-docker/blob/2.0.1/Dockerfile)
+
+- [1.4.1](https://github.com/Alfieri/jDownloader2-docker/blob/1.4/Dockerfile), [1.4](https://github.com/Alfieri/jDownloader2-docker/blob/1.4/Dockerfile) - Dockerfile is not up to date; the volume path is not correct but fixed already fixed in this version
 
 ## Versions
 
