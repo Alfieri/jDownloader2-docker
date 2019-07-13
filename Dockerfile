@@ -1,6 +1,6 @@
 FROM openjdk:11-slim
 
-ARG VERSION="2.0"
+ARG VERSION="2.0.1"
 LABEL maintainer="maak.daniel@gmail.com" \
         version=${VERSION}} \
         description="Dockerimage for JDownloader2 in Headless mode"
@@ -36,7 +36,7 @@ RUN chmod +x run-endless.sh \
 ###-----
 # Run
 ###-----
-VOLUME [ "/home/jdownloaders/Downloads" ]
+VOLUME [ "/home/jdownloader/Downloads" ]
 VOLUME [ "/opt/jdownloader2/cfg" ]
 RUN chown -R jdownloader:jdownloader /opt/jdownloader2
 CMD ["/bin/bash","run-endless.sh"]

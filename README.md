@@ -80,5 +80,5 @@ services:
     restart: always
     volumes:
       - "<your config path here>:/opt/jdownloader2/cfg"
-      - "<your download path here>:/root/Downloads"
+      - "<your download path here>:/home/jdownloader/Downloads"
 ```
