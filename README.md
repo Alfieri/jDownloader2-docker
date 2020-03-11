@@ -25,6 +25,8 @@ Docker image for JDownloader2 running in headless mode
 
 ## Supported Tags
 
+- [2.1.0](https://github.com/Alfieri/jDownloader2-docker/blob/2.1.0/Dockerfile), [latest](https://github.com/Alfieri/jDownloader2-docker/blob/2.1.0/Dockerfile)
+
 - [2.0.1](https://github.com/Alfieri/jDownloader2-docker/blob/2.0.1/Dockerfile), [2.0](https://github.com/Alfieri/jDownloader2-docker/blob/2.0.1/Dockerfile), [latest](https://github.com/Alfieri/jDownloader2-docker/blob/2.0.1/Dockerfile)
 
 - [1.4.1](https://github.com/Alfieri/jDownloader2-docker/blob/1.4/Dockerfile), [1.4](https://github.com/Alfieri/jDownloader2-docker/blob/1.4/Dockerfile) - Dockerfile is not up to date; the volume path is not correct but fixed already fixed in this version
