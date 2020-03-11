@@ -1,6 +1,6 @@
 FROM openjdk:11-slim
 
-ARG VERSION="2.0.1"
+ARG VERSION="2.1.0"
 LABEL maintainer="maak.daniel@gmail.com" \
         version=${VERSION}} \
         description="Dockerimage for JDownloader2 in Headless mode"
@@ -8,8 +8,8 @@ LABEL maintainer="maak.daniel@gmail.com" \
 ###-----
 # install unrar
 ###-----
-RUN sed -i "s#deb http://deb.debian.org/debian stretch main#deb http://deb.debian.org/debian stretch main non-free#g" /etc/apt/sources.list \
-        && sed -i "s#deb http://deb.debian.org/debian stretch-updates main#deb http://deb.debian.org/debian stretch-updates main non-free#g" /etc/apt/sources.list \
+RUN sed -i "s#deb http://deb.debian.org/debian buster main#deb http://deb.debian.org/debian buster main non-free#g" /etc/apt/sources.list \
+        && sed -i "s#deb http://deb.debian.org/debian buster-updates main#deb http://deb.debian.org/debian buster-updates main non-free#g" /etc/apt/sources.list \
         && apt-get update \ 
         && apt-get install -qy unrar sudo \
         && rm -rf /var/lib/apt/lists/*
