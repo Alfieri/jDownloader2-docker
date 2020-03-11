@@ -13,15 +13,15 @@
 
 Docker image for JDownloader2 running in headless mode
 
-- [Headless jDownloader2 Dockerimage](#Headless-jDownloader2-Dockerimage)
-  - [Supported Tags](#Supported-Tags)
-  - [Versions](#Versions)
+- [Headless jDownloader2 Dockerimage](#headless-jdownloader2-dockerimage)
+  - [Supported Tags](#supported-tags)
+  - [Versions](#versions)
     - [v2.x](#v2x)
     - [v1.x](#v1x)
-  - [Environment Variables](#Environment-Variables)
-  - [Usage](#Usage)
-    - [Docker CLI](#Docker-CLI)
-    - [Docker Compose](#Docker-Compose)
+  - [Environment Variables](#environment-variables)
+  - [Usage](#usage)
+    - [Docker CLI](#docker-cli)
+    - [Docker Compose](#docker-compose)
 
 ## Supported Tags
 
