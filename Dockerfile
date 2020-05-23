@@ -1,6 +1,6 @@
 FROM openjdk:11-slim
 
-ARG VERSION="2.2.0"
+ARG VERSION="2.3.0"
 LABEL maintainer="maak.daniel@gmail.com" \
         version=${VERSION}} \
         description="Dockerimage for JDownloader2 in Headless mode"
